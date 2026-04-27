@@ -3,19 +3,19 @@ os.system("cls")
 
 import pygame
 
-pygame.init()
+#Game Klasse erstellen
+class Game:
+    def __init__(self,players,cup,window):
+        self.players = players
+        self.cup = cup
+        self.window = window
+    
+#Methoden zum starten des Spiels.
 
-window= pygame.display.set_mode((1000, 500))
-background = pygame.image.load("hintergrund_fläche.jpg")
+    def play_turn(self):
+        for player in self.players:
+            print(f"{player.name} ist am Zug.")
+            pass
 
-running = True
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-    window.fill((255, 255, 255))
-    window.blit(background, (0, 0))
-    pygame.display.update()
-pygame.quit()
-
-
+    def game_won(self):
+        pass
