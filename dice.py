@@ -16,3 +16,6 @@ class Dice:
     def show(self):
         print(f"Würfel zeigt: {self.value}")
         
+    
+
+        

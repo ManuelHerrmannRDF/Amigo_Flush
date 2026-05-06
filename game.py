@@ -15,7 +15,12 @@ class Game:
     def play_turn(self):
         for player in self.players:
             print(f"{player.name} ist am Zug.")
-            pass
+        
+        
 
     def game_won(self):
-        pass
+        for player in self.players:
+            if player.score >= 100:
+                print(f"{player.name} hat gewonnen!")
+                return True
+        return False
