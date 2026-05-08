@@ -1,5 +1,6 @@
 import dice
 import game 
+import rules
 import scoreboard
 import pygame
 
@@ -19,7 +20,7 @@ window = pygame.display.set_mode((1000, 500))
 background = pygame.image.load("hintergrund_fläche.jpg")
 
 # Scoreboard erstellen mit initialen Punkten (alle 0)
-score_board = scoreboard.Scoreboard([0] * len(scoreboard.CATEGORIES))
+score_board = scoreboard.Scoreboard([0] * len(rules.CATEGORIES))
 
 running = True
 while running:
