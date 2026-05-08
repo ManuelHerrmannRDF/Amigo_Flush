@@ -5,12 +5,12 @@ import pygame
 
 #Liste mit Würfeln
 dice_list = []
-dice_list.append(dice.Dice(0, True, 1, (0, 0), "red"))
-dice_list.append(dice.Dice(0, True, 1, (0, 0), "blue"))
-dice_list.append(dice.Dice(0, True, 1, (0, 0), "green"))
-dice_list.append(dice.Dice(0, True, 1, (0, 0), "yellow"))
-dice_list.append(dice.Dice(0, True, 1, (0, 0), "black"))
-print(dice_list[0].value)
+dice_list.append(dice.Dice(0, True, 1, (50, 50), (255, 255, 255)))
+dice_list.append(dice.Dice(0, True, 1, (110, 50), (255, 255, 255)))
+dice_list.append(dice.Dice(0, True, 1, (170, 50), (255, 255, 255)))
+dice_list.append(dice.Dice(0, True, 1, (230, 50), (255, 255, 255)))
+dice_list.append(dice.Dice(0, True, 1, (290, 50), (255, 255, 255)))
+
 
 #spiel starten
 pygame.init()
@@ -29,6 +29,9 @@ while running:
     window.fill((255, 255, 255))
     #Spielfeld links
     window.blit(background, (0, 0))
+    #Würfel zeichnen
+    for die in dice_list:
+        die.draw(window)
     #Scoreboard rechts als Tabelle
     scoreboard.Scoreboard.draw_score_table(window, score_board)
 
