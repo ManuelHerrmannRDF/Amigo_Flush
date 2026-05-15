@@ -9,7 +9,8 @@ class Cup:
 #Methoden zum Becher schütteln und Würfel anzeigen
     def roll_dices(self):
       for dice in self.dice_list:
-          dice.roll_dice()
+          if dice.in_cup:
+              dice.roll_dice()
 
     def reset(self):
         for dice in self.dice_list:
