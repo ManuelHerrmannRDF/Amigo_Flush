@@ -3,6 +3,7 @@ import game
 import rules
 import scoreboard
 import pygame
+from pathlib import Path
 
 #Liste mit Würfeln
 dice_list = []
@@ -17,7 +18,8 @@ dice_list.append(dice.Dice(0, True, 1, (290, 50), (255, 255, 255)))
 pygame.init()
 
 window = pygame.display.set_mode((1000, 500))
-background = pygame.image.load("hintergrund_fläche.jpg")
+PROJECT_DIR = Path(__file__).resolve().parent
+background = pygame.image.load(PROJECT_DIR / "hintergrund_fläche.jpg")
 
 # Scoreboard erstellen mit initialen Punkten (alle 0)
 score_board = scoreboard.Scoreboard([0] * len(rules.CATEGORIES))
