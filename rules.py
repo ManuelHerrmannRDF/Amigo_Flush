@@ -42,6 +42,10 @@ class Rules:
             elif category == "Kleine Straße(30 Punkte)":
                 if set([1, 2, 3, 4]).issubset(dice_values) or set([2, 3, 4, 5]).issubset(dice_values) or set([3, 4, 5, 6]).issubset(dice_values):
                     return 30
+            elif category == "Große Straße(40 Punkte)":
+                if set([1, 2, 3, 4, 5]).issubset(dice_values) or set([2, 3, 4, 5, 6]).issubset(dice_values):
+                    return 40
+            
             
         # Weitere Kategorien können hier hinzugefügt werden
         return 0
